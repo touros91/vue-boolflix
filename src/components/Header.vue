@@ -4,9 +4,9 @@
             <div class="row">
                 <div class="col">
                     <div class="input-group mb-3 justify-content-end">
-                        <input type="text" placeholder="Cerca film">
+                        <input type="text" placeholder="Cerca film" v-model="inputText">
                         <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button">Cerca</button>
+                            <button class="btn btn-outline-secondary" type="button" @click="$emit('search', inputText)">Cerca</button>
                         </div>
                     </div>
                 </div> 
@@ -17,7 +17,12 @@
 
 <script>
 export default {
-    name: 'Header'
+    name: 'Header',
+    data(){
+        return {
+            inputText: ""
+        }
+    }
 }
 </script>
 
