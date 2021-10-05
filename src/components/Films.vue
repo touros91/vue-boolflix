@@ -2,7 +2,7 @@
     <div>
         <div class="container">
             <div class="row">
-                <div class="col p-3">
+                <div class="col">
                     <FilmCard v-for="(film, index) in moviesResult" :key="index" :film="film"/>
                 </div>
             </div>

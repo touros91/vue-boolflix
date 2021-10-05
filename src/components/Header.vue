@@ -2,7 +2,7 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col padding-20">
                     <div class="input-group mb-3 justify-content-end">
                         <input type="text" placeholder="Cerca film" v-model="inputText">
                         <div class="input-group-append">
@@ -26,6 +26,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.padding-20{
+    padding: 20px;
+}
 </style>
