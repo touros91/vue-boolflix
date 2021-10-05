@@ -2,11 +2,12 @@
     <header>
         <div class="container">
             <div class="row">
+                <div class="col logo padding-20">BOOLFLIX</div>
                 <div class="col padding-20">
                     <div class="input-group mb-3 justify-content-end">
                         <input type="text" placeholder="Cerca film" v-model="inputText">
-                        <div class="input-group-append">
-                            <button class="btn btn-outline-secondary" type="button" @click="$emit('search', inputText)">Cerca</button>
+                        <div class="input-group-append mx-3">
+                            <button class="btn btn-light" type="button" @click="$emit('search', inputText)">Cerca</button>
                         </div>
                     </div>
                 </div> 
@@ -27,6 +28,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+header {
+    background-color: black;
+    .logo {
+        font-size: 30px;
+        color: red;
+    }
+}
 .padding-20{
     padding: 20px;
 }
