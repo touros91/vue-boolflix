@@ -3,14 +3,14 @@
         <div class="films" v-if="film.title != null">
             <h5>Titolo Film: <strong>{{film.title}}</strong></h5>
             <h5>Titolo Film Originale: <strong>{{film.original_title}}</strong></h5>
-            <h6>Lingua: <lang-flag :iso='film.original_language' :squared="false"/></h6>
+            <h6>Lingua: {{film.original_language.toUpperCase()}} <lang-flag :iso='film.original_language' :squared="false"/></h6>
             <h6>Voto: {{film.vote_average}}</h6>
             <hr>
         </div>
         <div class="series" v-if="film.name != null">
             <h5>Titolo Serie TV: <strong>{{film.name}}</strong></h5>
             <h5>Titolo Serie TV Originale: <strong>{{film.original_name}}</strong></h5>
-            <h6>Lingua: <lang-flag :iso='film.original_language' :squared="false"/></h6>
+            <h6>Lingua: {{film.original_language.toUpperCase()}} <lang-flag :iso='film.original_language' :squared="false"/></h6>
             <h6>Voto: {{film.vote_average}}</h6>
             <hr>
         </div>
