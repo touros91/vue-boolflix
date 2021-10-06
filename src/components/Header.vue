@@ -6,7 +6,7 @@
                 <div class="col padding-20">
                     <div class="input-group mb-3 justify-content-end">
                         <input type="text" placeholder="Cerca film" v-model="inputText">
-                        <div class="input-group-append mx-3">
+                        <div class="input-group-append mx-2">
                             <button class="btn btn-light" type="button" @click="$emit('search', inputText)">Cerca</button>
                         </div>
                     </div>
@@ -28,14 +28,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-header {
-    background-color: black;
-    .logo {
-        font-size: 30px;
-        color: red;
-    }
+@import '../assets/style/common.scss';
+
+.logo {
+    font-size: 30px;
+    color: red;
 }
+
 .padding-20{
     padding: 20px;
+}
+
+input[type=text] {
+    padding: 0 10px;
 }
 </style>

@@ -1,13 +1,9 @@
 <template>
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <FilmCard v-for="(film, index) in totalList" :key="index" :film="film"/>
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <div class="row">
+        <FilmCard v-for="(film, index) in totalList" :key="index" :film="film"/>
     </div>
+</div>
 </template>
 
 <script>
@@ -23,5 +19,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import '../assets/style/common.scss';
 </style>

@@ -1,4 +1,19 @@
 // importo Bootstrap 
 @import '~bootstrap/scss/bootstrap.scss';
 
+// common 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(20, 20, 20);
+}
+
+main {
+    background-color: rgb(20, 20, 20);
+}
+
 
