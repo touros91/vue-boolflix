@@ -6,8 +6,8 @@
                 <div class="col padding-20">
                     <div class="input-group mb-3 justify-content-end">
                         <input type="text" placeholder="Cerca film" v-model="inputText">
-                        <div class="input-group-append mx-2">
-                            <button class="btn btn-light" type="button" @click="$emit('search', inputText)">Cerca</button>
+                        <div class="input-group-append mx-1">
+                            <button class="btn btn-light" type="button" @click="$emit('search', inputText)"><i class="fas fa-search"></i></button>
                         </div>
                     </div>
                 </div> 
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+
 export default {
     name: 'Header',
     data(){
@@ -32,6 +33,7 @@ export default {
 
 .logo {
     font-size: 30px;
+    font-weight: bold;
     color: red;
 }
 
