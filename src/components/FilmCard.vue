@@ -16,7 +16,8 @@
             <h5>Titolo Serie TV Originale: <strong>{{film.original_name}}</strong></h5>
             <h6>Lingua: {{film.original_language.toUpperCase()}} <lang-flag :iso='film.original_language' :squared="false"/></h6>
             <h6>Voto: {{Math.round(film.vote_average/2)}}
-                <i class="fas fa-star" v-for="(star, i) in Math.round(film.vote_average/2)" :key="i"></i>
+                <i class="fas fa-star yellow" v-for="(star, i) in Math.round(film.vote_average/2)" :key="i"></i>
+                <i class="far fa-star" v-for="(starEmpty, index) in (5 - Math.round(film.vote_average/2))" :key="index"></i>
             </h6>
             <img :src="`https://image.tmdb.org/t/p/w154/` + film.poster_path" :alt="film.name">
             <hr>
