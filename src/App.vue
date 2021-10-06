@@ -25,7 +25,7 @@ export default {
     },
     methods: {
         searchFilm(filmToSearch){
-            axios.get('https://api.themoviedb.org/3/search/movie',{
+            axios.get('https://api.themoviedb.org/3/search/movie', {
                       params: {
                           api_key: 'dfb070b958255d617f646fa427b32530',
                           query: filmToSearch,
