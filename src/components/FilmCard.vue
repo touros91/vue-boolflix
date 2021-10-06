@@ -1,9 +1,9 @@
 <template>
-    <div >
-        <div>Titolo: {{film.titolo}}</div>
-        <div>Titolo Originale: {{film.titoloOriginale}}</div>
-        <div>Lingua: {{film.lingua}}</div>
-        <div>Voto: {{film.voto}}</div>
+    <div class="margin-top-30">
+        <h5>Titolo: <strong>{{film.title}}</strong></h5>
+        <h5>Titolo Originale: <strong>{{film.original_title}}</strong></h5>
+        <h6>Lingua: {{film.original_language}}</h6>
+        <h6>Voto: {{film.vote_average}}</h6>
         <hr>
     </div>
 </template>
@@ -15,6 +15,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+.margin-top-30{
+    margin-top: 30px;
+}
 </style>
