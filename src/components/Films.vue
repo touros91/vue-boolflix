@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <FilmCard v-for="(film, index) in movieList" :key="index" :film="film"/>
+                    <FilmCard v-for="(film, index) in totalList" :key="index" :film="film"/>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@ import FilmCard from './FilmCard.vue';
 
 export default {
     name: 'Films',
-    props: ['movieList'],
+    props: ['totalList'],
     components: {
         FilmCard
     }
