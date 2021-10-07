@@ -42,7 +42,7 @@ export default {
 input[type=text] {
     color: white;
     padding: 0 10px;
-    border: 1px solid white;
+    border: 1px solid rgb(219, 217, 217);
     background-color: $bgColor;
 }
 
