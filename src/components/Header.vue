@@ -2,12 +2,12 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col logo padding-20">
+                <div class="col padding-20 logo">
                     <a href="#"><img src="https://fontmeme.com/permalink/211007/e0f90358ce3490bb6bab27460a167c80.png" alt="Boolflix Logo" border="0"></a>
                 </div>
                 <div class="col padding-20">
                     <form>
-                        <div class="input-group mb-3 justify-content-end">
+                        <div class="input-group mb-3 d-flex flex-nowrap justify-content-end">
                             <input type="text" placeholder="Cerca" v-model="inputText">
                             <div class="input-group-append mx-1">
                                 <button class="btn btn-dark" type="submit" @click.prevent="$emit('search', inputText)"><i class="fas fa-search"></i></button>

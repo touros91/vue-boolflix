@@ -1,6 +1,6 @@
 <template>
-    <div class="col-4 d-flex">
-       <!-- <iframe width="420" height="345" src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"></iframe> -->
+    <div class="col col-sm-12 col-md-6 col-lg-4 d-flex align-self-start">
+        <!-- contenitore Films  -->
         <div class="film-card" v-if="film.title">
             <div class="card-image">
                 <img v-if="film.poster_path" :src="`https://image.tmdb.org/t/p/w342/` + film.poster_path" :alt="film.original_title">
@@ -17,7 +17,7 @@
                 <div><strong>Overview: </strong>{{film.overview}}</div>
             </div>
         </div>
-        
+        <!-- contenitore Serie TV          -->
         <div class="serie-card" v-if="film.name"> 
             <div class="card-image">
                 <img v-if="film.poster_path" :src="`https://image.tmdb.org/t/p/w342/` + film.poster_path" :alt="film.original_title">
