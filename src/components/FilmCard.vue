@@ -1,5 +1,5 @@
 <template>
-    <div class="col col-sm-12 col-md-6 col-lg-4 d-flex align-self-start">
+    <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
         <!-- contenitore Films  -->
         <div class="film-card" v-if="film.title">
             <div class="card-image">

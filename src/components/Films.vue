@@ -18,7 +18,7 @@
                 
                 <h4 class="margin-top-20">Popolari su Boolflix</h4>
                 <!-- sezione Homepage con i film più popolari  -->
-                <div class="col col-sm-12 col-md-6 col-lg-4 d-flex align-self-start" v-for="(movie, index) in moviesHomePage" :key="index">
+                <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center" v-for="(movie, index) in moviesHomePage" :key="index">
                     <div class="film-card">
                         <div class="card-image">
                             <img :src="`https://image.tmdb.org/t/p/w342/` + movie.poster_path" :alt="movie.original_title">
@@ -86,10 +86,10 @@ iframe {
 }
 .trailer {
     position: absolute;
-    left: 50px;
-    bottom: 50px;
+    left: 40px;
+    bottom: 80px;
     width: 50%;
-    color: $mainColor;
+    color: rgb(219, 217, 217);
     margin: 10px 0;
    .trailer-image {
        max-width: 350px;
