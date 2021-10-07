@@ -38,15 +38,12 @@ export default {
             })
             .then((resp) => {
                 this.movies = resp.data.results;
-                console.log(this.movies);
-
             });   
             axios.get('https://api.themoviedb.org/3/search/tv', {
                 params: paramsObj
             })
             .then((resp) => {
                 this.series = resp.data.results;
-                console.log(this.series);
             });  
         }
     },

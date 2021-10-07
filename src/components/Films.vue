@@ -15,10 +15,9 @@
                         </div>
                     </div>
                 </div>
-                
                 <h4 class="margin-top-20">Popolari su Boolflix</h4>
                 <!-- sezione Homepage con i film più popolari  -->
-                <div class="col-xs-12 col-sm-6 col-xl-4 d-flex justify-content-center" v-for="(movie, index) in moviesHomePage" :key="index">
+                <div class="col-12 col-md-6 col-lg-4 d-flex justify-content-center" v-for="(movie, index) in moviesHomePage" :key="index">
                     <div class="film-card">
                         <div class="card-image">
                             <img :src="`https://image.tmdb.org/t/p/w342/` + movie.poster_path" :alt="movie.original_title">
@@ -36,7 +35,7 @@
                             <div><strong>Overview: </strong>{{movie.overview}}</div>
                         </div>
                     </div>
-                </div>
+                </div>                
             </div>
         </div>
     </div>
@@ -62,15 +61,22 @@ export default {
     },
     data(){
         return{
+            apiKey: 'dfb070b958255d617f646fa427b32530',
             moviesHomePage: []
         }
     },
     created (){
-        axios.get('https://api.themoviedb.org/3/search/movie?api_key=dfb070b958255d617f646fa427b32530&language=it_IT&query=with')
-        .then((resp) => {
-            this.moviesHomePage = resp.data.results;
-            console.log(this.moviesHomePage);
-        });   
+        const paramsObj = {
+                            api_key: this.apiKey,
+                            query: 'you',
+                            language: 'it-IT'
+                        };
+            axios.get('https://api.themoviedb.org/3/search/movie', {
+                params: paramsObj
+            })
+            .then((resp) => {
+                this.moviesHomePage = resp.data.results;
+            });
     }
 }
 </script>
