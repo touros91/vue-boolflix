@@ -18,7 +18,7 @@
                 
                 <h4 class="margin-top-20">Popolari su Boolflix</h4>
                 <!-- sezione Homepage con i film più popolari  -->
-                <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center" v-for="(movie, index) in moviesHomePage" :key="index">
+                <div class="col-xs-12 col-sm-6 col-xl-4 d-flex justify-content-center" v-for="(movie, index) in moviesHomePage" :key="index">
                     <div class="film-card">
                         <div class="card-image">
                             <img :src="`https://image.tmdb.org/t/p/w342/` + movie.poster_path" :alt="movie.original_title">
@@ -27,7 +27,9 @@
                             <h5>Titolo Film: <strong>{{movie.title}}</strong></h5>
                             <h5>Titolo Film Originale: <strong>{{movie.original_title}}</strong></h5>
                             <h6>Lingua: {{movie.original_language.toUpperCase()}} <lang-flag :iso='movie.original_language' :squared="false"/></h6>
+                            <!-- calcolo del voto  -->   
                             <h6>Voto: {{Math.round(movie.vote_average/2)}} 
+                                <!-- calcolo e visualizzazione del voto in stelle -->
                                 <i class="fas fa-star yellow" v-for="(star, index) in Math.round(movie.vote_average/2)" :key="index"></i>
                                 <i class="far fa-star" v-for="(starEmpty, index) in (5 - Math.round(movie.vote_average/2))" :key="index"></i>
                             </h6>

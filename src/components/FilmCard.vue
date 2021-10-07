@@ -1,16 +1,18 @@
 <template>
-    <div class="col col-sm-12 col-md-6 col-lg-4 d-flex justify-content-center">
+    <div class="col-xs-12 col-sm-6 col-xl-4 d-flex justify-content-center">
         <!-- contenitore Films  -->
         <div class="film-card" v-if="film.title">
             <div class="card-image">
                 <img v-if="film.poster_path" :src="`https://image.tmdb.org/t/p/w342/` + film.poster_path" :alt="film.original_title">
-                <img v-else :src="this.alternativeImage" :alt="altText">
+                <img v-else :src="this.alternativeImage" :alt="this.altText">
             </div>
             <div class="info">
                 <h5>Titolo Film: <strong>{{film.title}}</strong></h5>
                 <h5>Titolo Film Originale: <strong>{{film.original_title}}</strong></h5>
                 <h6>Lingua: {{film.original_language.toUpperCase()}} <lang-flag :iso='film.original_language' :squared="false"/></h6>
+                <!-- calcolo del voto  -->
                 <h6>Voto: {{Math.round(film.vote_average/2)}} 
+                    <!-- calcolo e visualizzazione del voto in stelle -->
                     <i class="fas fa-star yellow" v-for="(star, index) in Math.round(film.vote_average/2)" :key="index"></i>
                     <i class="far fa-star" v-for="(starEmpty, index) in (5 - Math.round(film.vote_average/2))" :key="index"></i>
                 </h6>

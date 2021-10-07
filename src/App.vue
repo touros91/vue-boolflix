@@ -26,6 +26,7 @@ export default {
         Films
     },
     methods: {
+        // metodo che registra l'evento $emit inviato dal figlio Header nel padre App e che effettua una chiamata Axios per i films e una chiamata Axios per le serie tv
         searchFilm(filmToSearch){
             const paramsObj = {
                                 api_key: this.apiKey,
@@ -50,6 +51,7 @@ export default {
         }
     },
     computed: {
+        // computed property che concatena gli array films e serie in un terzo array per la visualizzazione nella homepage 
         totalListMovies(){
             let totalList = [];
             totalList = this.movies.concat(this.series);     
