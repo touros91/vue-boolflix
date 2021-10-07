@@ -5,6 +5,7 @@
     height: 100%;
     padding: 20px;
     width: 100%;
+    
     .card-image {
         width: 100%;
         height: 100%;
@@ -14,17 +15,26 @@
             height: 100%;
         }
     }
-}
-.info {
-    width: 100%;
-    height: 604px;
-    background-color: black;
-    color: white;
-    padding: 30px 15px;
-    .overview {
-        font-size: 14px;
+    
+    .info {
+        width: 100%;
+        height: 604px;
+        background-color: black;
+        color: white;
+        padding: 30px 15px;
+        display: none;
+        .overview {
+            font-size: 14px;
+        }
+        .yellow {
+            color: rgb(255, 190, 0);
+        }
     }
-}
-.yellow {
-    color: rgb(255, 190, 0);
+    
+    .card-image:hover {
+        display: none;
+    }
+    .card-image:hover .info {
+        display: block;
+    }
 }

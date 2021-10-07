@@ -5,10 +5,10 @@
             <div class="row">
                 <div class="col-4 d-flex" v-for="(movie, index) in moviesHomePage" :key="index">
                     <div class="film-card">
-                        <div class="card-image" @mouseover="visible=false" @mouseleave="visible=true" v-show="visible">
+                        <div class="card-image">
                             <img :src="`https://image.tmdb.org/t/p/w342/` + movie.poster_path" :alt="movie.original_title">
                         </div>
-                        <div class="info" v-show="visible==false">
+                        <div class="info">
                             <h5>Titolo Film: <strong>{{movie.title}}</strong></h5>
                             <h5>Titolo Film Originale: <strong>{{movie.original_title}}</strong></h5>
                             <h6>Lingua: {{movie.original_language.toUpperCase()}} <lang-flag :iso='movie.original_language' :squared="false"/></h6>
@@ -46,7 +46,7 @@ export default {
     data(){
         return{
             moviesHomePage: [],
-            visible: true
+            // visible: true
         }
     },
     created (){

@@ -1,10 +1,10 @@
 <template>
     <div class="col-4 d-flex">
         <div class="film-card" v-if="film.title">
-            <div class="card-image" @mouseover="visible=false" @mouseleave="visible=true" v-show="visible">
+            <div class="card-image">
                 <img :src="`https://image.tmdb.org/t/p/w342/` + film.poster_path" :alt="film.original_title">
             </div>
-            <div class="info" v-show="visible==false">
+            <div class="info">
                 <h5>Titolo Film: <strong>{{film.title}}</strong></h5>
                 <h5>Titolo Film Originale: <strong>{{film.original_title}}</strong></h5>
                 <h6>Lingua: {{film.original_language.toUpperCase()}} <lang-flag :iso='film.original_language' :squared="false"/></h6>
@@ -17,10 +17,10 @@
         </div>
         
         <div class="serie-card" v-if="film.name"> 
-            <div class="card-image" @mouseover="visible=false" @mouseleave="visible=true" v-show="visible">
+            <div class="card-image">
                 <img :src="`https://image.tmdb.org/t/p/w342/` + film.poster_path" :alt="film.original_name">
             </div>
-            <div class="info" v-show="visible==false">
+            <div class="info">
                 <h5>Titolo Serie TV: <strong>{{film.name}}</strong></h5>
                 <h5>Titolo Serie TV Originale: <strong>{{film.original_name}}</strong></h5>
                 <h6>Lingua: {{film.original_language.toUpperCase()}} <lang-flag :iso='film.original_language' :squared="false"/></h6>
