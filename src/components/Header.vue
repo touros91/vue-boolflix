@@ -3,14 +3,14 @@
         <div class="container">
             <div class="row">
                 <div class="col logo padding-20">
-                    <a href="https://fontmeme.com/netflix-font/"><img src="https://fontmeme.com/permalink/211007/e0f90358ce3490bb6bab27460a167c80.png" alt="netflix-font" border="0"></a>
+                    <a href="#"><img src="https://fontmeme.com/permalink/211007/e0f90358ce3490bb6bab27460a167c80.png" alt="Boolflix Logo" border="0"></a>
                 </div>
                 <div class="col padding-20">
                     <form>
                         <div class="input-group mb-3 justify-content-end">
-                            <input type="text" placeholder="Cerca film" v-model="inputText">
+                            <input type="text" placeholder="Cerca" v-model="inputText">
                             <div class="input-group-append mx-1">
-                                <button class="btn btn-light" type="submit" @click.prevent="$emit('search', inputText)"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-dark" type="submit" @click.prevent="$emit('search', inputText)"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </form>
@@ -40,6 +40,13 @@ export default {
 }
 
 input[type=text] {
+    color: white;
     padding: 0 10px;
+    border: none;
+    background-color: $bgColor;
+}
+
+button {
+    background-color: $bgColor; 
 }
 </style>
