@@ -61,18 +61,5 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/style/common.scss';
-
-.film-card, .serie-card {
-    padding: 30px 0;
-    margin-bottom: 30px;
-}
-.info {
-    height: 515px;
-    background-color: black;
-    color: white;
-    padding: 20px;
-}
-.yellow {
-    color: rgb(255, 190, 0);
-}
+@import '../assets/style/commonCardStyle.scss';
 </style>

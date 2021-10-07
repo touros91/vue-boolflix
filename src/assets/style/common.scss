@@ -1,6 +1,12 @@
 // importo Bootstrap 
 @import '~bootstrap/scss/bootstrap.scss';
 
+// import Font Awesome package
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+// import variables
+@import './variables.scss';
+
 // common 
 * {
     box-sizing: border-box;
@@ -9,11 +15,11 @@
 }
 
 header {
-    background-color: rgb(20, 20, 20);
+    background-color: $bgColor;
 }
 
 main {
-    background-color: rgb(20, 20, 20);
+    background-color: $bgColor;
 }
 
 

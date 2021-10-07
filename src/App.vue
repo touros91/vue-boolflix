@@ -16,6 +16,7 @@ export default {
     name: 'App',
     data(){
         return {
+            apiKey: 'dfb070b958255d617f646fa427b32530',
             movies: [],
             series: [],
         }
@@ -26,12 +27,13 @@ export default {
     },
     methods: {
         searchFilm(filmToSearch){
+            const paramsObj = {
+                                api_key: this.apiKey,
+                                query: filmToSearch,
+                                language: 'it-IT'
+                            };
             axios.get('https://api.themoviedb.org/3/search/movie', {
-                params: {
-                    api_key: 'dfb070b958255d617f646fa427b32530',
-                    query: filmToSearch,
-                    language: 'it-IT'
-                }
+                params: paramsObj
             })
             .then((resp) => {
                 this.movies = resp.data.results;
@@ -39,11 +41,7 @@ export default {
 
             });   
             axios.get('https://api.themoviedb.org/3/search/tv', {
-                params: {
-                    api_key: 'dfb070b958255d617f646fa427b32530',
-                    query: filmToSearch,
-                    language: 'it-IT'
-                }
+                params: paramsObj
             })
             .then((resp) => {
                 this.series = resp.data.results;
@@ -63,4 +61,5 @@ export default {
 
 <style lang="scss">
 @import './assets/style/common.scss';
+@import './assets/style/commonCardStyle.scss';
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="col-4 d-flex">
-        <div class="film-card" v-if="film.title != null">
+        <div class="film-card" v-if="film.title">
             <div class="card-image" @mouseover="visible=false" @mouseleave="visible=true" v-show="visible">
                 <img :src="`https://image.tmdb.org/t/p/w342/` + film.poster_path" :alt="film.original_title">
             </div>
@@ -12,11 +12,11 @@
                     <i class="fas fa-star yellow" v-for="(star, index) in Math.round(film.vote_average/2)" :key="index"></i>
                     <i class="far fa-star" v-for="(starEmpty, index) in (5 - Math.round(film.vote_average/2))" :key="index"></i>
                 </h6>
-                <div><strong>Overview: </strong>{{film.overview}}</div>
+                <div class="overview"><strong>Overview: </strong>{{film.overview}}</div>
             </div>
         </div>
         
-        <div class="serie-card" v-if="film.name != null"> 
+        <div class="serie-card" v-if="film.name"> 
             <div class="card-image" @mouseover="visible=false" @mouseleave="visible=true" v-show="visible">
                 <img :src="`https://image.tmdb.org/t/p/w342/` + film.poster_path" :alt="film.original_name">
             </div>
@@ -28,7 +28,7 @@
                     <i class="fas fa-star yellow" v-for="(star, i) in Math.round(film.vote_average/2)" :key="i"></i>
                     <i class="far fa-star" v-for="(starEmpty, index) in (5 - Math.round(film.vote_average/2))" :key="index"></i>
                 </h6>
-                <div><strong>Overview: </strong>{{film.overview}}</div>
+                <div class="overview"><strong>Overview: </strong>{{film.overview}}</div>
             </div>
         </div>
     </div>
@@ -53,18 +53,5 @@ export default {
 
 <style lang="scss" scoped>
 @import '../assets/style/common.scss';
-
-.film-card, .serie-card {
-    padding: 30px 0;
-    margin-bottom: 30px;
-}
-.info {
-    height: 515px;
-    background-color: black;
-    color: white;
-    padding: 20px;
-}
-.yellow {
-    color: rgb(255, 190, 0);
-}
+@import '../assets/style/commonCardStyle.scss';
 </style>
