@@ -10,7 +10,7 @@
                         <div class="input-group mb-3 d-flex flex-nowrap justify-content-end">
                             <input type="text" placeholder="Cerca" v-model="inputText">
                             <div class="input-group-append mx-1">
-                                <button class="btn btn-dark" type="submit" @click.prevent="$emit('search', inputText)"><i class="fas fa-search"></i></button>
+                                <button class="btn btn-dark" type="submit" @click.prevent="searching()"><i class="fas fa-search"></i></button>
                             </div>
                         </div>
                     </form>
@@ -26,6 +26,13 @@ export default {
     data(){
         return {
             inputText: ""
+        }
+    },
+    methods: {
+        // metodo per lanciare l'emit e svuotare il campo input subito dopo
+        searching(){
+            this.$emit('search', this.inputText);
+            this.inputText = "";
         }
     }
 }
